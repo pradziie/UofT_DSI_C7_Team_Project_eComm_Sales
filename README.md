@@ -1,6 +1,6 @@
 # UofT DSI C7 Team Project eComm Sales
 ## ProfitLens: Visualizing E-Commerce Trends
-
+Test1
 Business proposal - "Our goal is to understand which products, regions, and discount strategies drive the highest profitability and how data-driven decisions can improve business outcomes"
 
 E-Commerce dataset from Kaggle to study how different factors — like products, regions, and discounts — affect sales and profit. We want to find out which areas of the business make the most money and how companies can use data to make smarter decisions.
