@@ -45,20 +45,26 @@ Find seasonal sales patterns
 Build visualizations for profitability insights
 THIS WE CAN INCLUDE FOR - Data Cleaning Tasks IN README FILE
 ### Preliminary data analysis ideas:
+
 What to Explore Exploratory Data Analysis (EDA Ideas)
 Once cleaned, you can analyze patterns like:
+
 **Product Insights**
 Which categories (e.g., kurta, top, dress) sell the most?
 Which category brings the highest revenue?
+
 **Regional Insights**
 Which states or cities have the most orders?
 Are certain regions more profitable?
+
 **Order Performance**
 Compare Amazon-fulfilled vs Merchant-fulfilled orders.
 Find how many were cancelled, shipped, or pending.
+
 **Sales & Discount Patterns**
 How does quantity relate to total amount?
 Check if discounts or promotions affect sales volume.
+
 **Time-based Trends**
 Which months or days have the most orders or sales?
 Detect seasonal spikes in sales (for example, festivals or holidays).
