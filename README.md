@@ -47,19 +47,19 @@ THIS WE CAN INCLUDE FOR - Data Cleaning Tasks IN README FILE
 ### Preliminary data analysis ideas:
 What to Explore Exploratory Data Analysis (EDA Ideas)
 Once cleaned, you can analyze patterns like:
-:label: Product Insights
+**Product Insights**
 Which categories (e.g., kurta, top, dress) sell the most?
 Which category brings the highest revenue?
-:earth_africa: Regional Insights
+**Regional Insights**
 Which states or cities have the most orders?
 Are certain regions more profitable?
-:package: Order Performance
+**Order Performance**
 Compare Amazon-fulfilled vs Merchant-fulfilled orders.
 Find how many were cancelled, shipped, or pending.
-:moneybag: Sales & Discount Patterns
+**Sales & Discount Patterns**
 How does quantity relate to total amount?
 Check if discounts or promotions affect sales volume.
-:date: Time-based Trends
+**Time-based Trends**
 Which months or days have the most orders or sales?
 Detect seasonal spikes in sales (for example, festivals or holidays).
 Once the data is clean, you can create charts like:
