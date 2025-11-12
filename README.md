@@ -35,6 +35,13 @@ Deliverable – End of Week 1 (Project Proposal)
 * Lack of cost/BOM data for further analysis
 * Time constraints
 
+### Parameters (main ones)
+- price
+- product quantity
+- state
+- product type
+- date
+
 ### Data cleaning temp notes:
 1. Remove unnecessary columns
 The column “index” is just numbering — you can delete it.
