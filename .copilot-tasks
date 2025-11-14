@@ -1,0 +1,4 @@
+- [ ] Inspect git history to find commit with correct notebook version
+- [ ] Restore notebook from that commit into working tree
+- [ ] Verify restored notebook matches expected content
+- [ ] Commit or stash as needed after user confirmation

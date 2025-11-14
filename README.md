@@ -7,3 +7,103 @@ E-Commerce dataset from Kaggle to study how different factors — like products,
 
 ## Objectives 
 Clean and organize the data for analysis. Find patterns between Sales, Profit, and Discounts. Identify which categories and regions are most profitable. Create easy-to-understand charts and graphs to share results. Build a model to predict future profit or sales
+
+### Responsibilities
+- Vikrama: business proposal, naming, data cleaning, experiments, code review
+- Iryna: dataset selection, data exploration, KPI development, setting business goals
+- Paul: repo management, project tracking, data exploration and cleaning, slides, vizualization, presentation management
+
+### Project plan:
+Deliverable – End of Week 1 (Project Proposal)
+
+• Business motivation: Explain the problem or opportunity your project addresses and why it matters from a business perspective.
+
+• Dataset selection: Identify which dataset you chose, its source, and the key variables you’ll analyze.
+
+• Project objective / research question: State the main question or hypothesis your analysis or model will answer.
+
+• Proposed methods / approach: Briefly outline how you plan to explore the data (e.g., visualization, regression, classification, etc.).
+
+• Roles and responsibilities: Indicate who is doing what within the team.
+
+• Risks and unknowns: Note any challenges, assumptions, or potential limitations you’ve identified.
+
+• Initial repository structure: Your GitHub repo should follow the suggested folder layout (data/, src/, reports/, etc.) and include a clean .gitignore.
+
+### Risks/Unknowns
+* No clear way to calculate profit margins given the datasets
+* Lack of cost/BOM data for further analysis
+* Time constraints
+
+### Parameters (main ones)
+- price
+- product quantity
+- state
+- product type
+- date
+
+### Data cleaning temp notes:
+1. Remove unnecessary columns
+The column “index” is just numbering — you can delete it.
+“promotion-ids” may contain long text; you can either keep it for later or remove it if not needed for profit analysis.
+2. Fix missing values
+Some columns have missing entries:
+Courier Status, currency, Amount, ship-city, ship-state, fulfilled-by
+You can:
+Fill missing text fields with "Unknown"
+Drop rows with missing Amount (since sales amount is essential)
+3. Convert data types
+Date should be changed from text to date format (for time-based analysis).
+ship-postal-code should be made an integer (it’s currently stored as float).
+Columns like Amount should be numeric (already fine)
+4. Handle inconsistent text formats
+Convert all text columns like Category, ship-state, Status to lowercase to avoid duplicates like “Shipped” vs “shipped”.
+Remove extra spaces.
+5. Check for duplicate records
+Sometimes the same Order ID might appear twice (especially with status changes).
+ Keep only the most recent or relevant status.
+6. Clean or group categorical values
+Combine similar order statuses like "Shipped - Delivered to Buyer" and "Shipped" into one.
+Group fulfillment types (e.g., Amazon, Merchant) for consistency.
+7. Currency consistency
+If the dataset contains multiple currencies, convert them all to one (e.g., INR).
+If it’s all INR, confirm and keep the column clean.
+8. Optional: Add derived columns
+Once clean, you can add:
+Profit Margin = Amount / Qty
+Month / Year extracted from Date for trend analysis.
+After data cleaning, your dataset will be ready to:
+Analyze sales by category, city, or fulfillment type
+Compare status vs. profit trends
+Find seasonal sales patterns
+Build visualizations for profitability insights
+THIS WE CAN INCLUDE FOR - Data Cleaning Tasks IN README FILE
+### Preliminary data analysis ideas:
+
+What to Explore Exploratory Data Analysis (EDA Ideas)
+Once cleaned, you can analyze patterns like:
+
+**Product Insights**
+Which categories (e.g., kurta, top, dress) sell the most?
+Which category brings the highest revenue?
+
+**Regional Insights**
+Which states or cities have the most orders?
+Are certain regions more profitable?
+
+**Order Performance**
+Compare Amazon-fulfilled vs Merchant-fulfilled orders.
+Find how many were cancelled, shipped, or pending.
+
+**Sales & Discount Patterns**
+How does quantity relate to total amount?
+Check if discounts or promotions affect sales volume.
+
+**Time-based Trends**
+Which months or days have the most orders or sales?
+Detect seasonal spikes in sales (for example, festivals or holidays).
+Once the data is clean, you can create charts like:
+Bar Chart: Sales by category
+Pie Chart: Order status breakdown
+Line Chart: Monthly sales trends
+Heatmap: Correlation between sales amount, quantity, and discounts
