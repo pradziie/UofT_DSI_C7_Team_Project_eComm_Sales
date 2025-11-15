@@ -1,5 +1,6 @@
 # UofT DSI C7 Team Project eComm Sales
 ## ProfitLens: Visualizing E-Commerce Trends
+<img width="813" height="813" alt="profitLensLogo3" src="https://github.com/user-attachments/assets/fddb7c29-38b7-492e-8d77-59920b1b5698" />
 
 Business proposal - "Our goal is to understand which products, regions, and discount strategies drive the highest profitability and how data-driven decisions can improve business outcomes"
 
