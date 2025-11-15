@@ -36,25 +36,50 @@ Clean and organize the data for analysis. Find patterns between Sales, Profit, a
 
 ### Repository Structure & Reproducibility
 
-The repository follows the recommended teaching structure from the Team Project guidelines:
+The repository follows the recommended teaching structure from the Team Project guidelines, with a few project-specific additions (some duplication was needed for backups and reproducibility):
 
 ```
-├── data
-│   ├── processed
+├── .copilot-tasks/
+├── .git/
+├── .gitignore
+├── README.md
+├── data/
+│   ├── design/
+│   │   └── logos/
+│   ├── processed/
 │   │   └── Amazon_Sale_Report_Cleaned.csv
-│   └── raw
-│       └── Amazon Sale Report.csv
-├── experiments
-│   ├── Amazon Sale Report.ipynb
-│   └── Regression_Project_Amazon_Sales - 1.ipynb
-├── models
-├── reports
-├── src
+│   ├── raw/
+│   │   ├── Amazon Sale Report.csv
+│   │   ├── Amazon Sale Report.ipynb
+│   │   ├── Cloud Warehouse Compersion Chart.csv
+│   │   ├── Expense IIGF.csv
+│   │   ├── International sale Report.csv
+│   │   ├── May-2022.csv
+│   │   ├── P  L March 2021.csv
+│   │   ├── Sale Report.csv
+│   │   ├── monthly_sales_trend.csv
+│   │   ├── sales_by_category.csv
+│   │   ├── sales_by_city.csv
+│   │   ├── sales_by_fulfillment.csv
+│   │   └── status_vs_sales.csv
+│   └── temp/
+├── experiments/
 │   ├── Amazon Sale Report.ipynb
 │   ├── Regression_Project_Amazon_Sales - 1.ipynb
-│   └── Amazon-Sales_Report-Power-BI.pbix
-├── README.md
-└── .gitignore
+│   ├── Test-File-1.ipynb
+│   └── outputs/
+├── materials/
+│   └── presentations/
+├── models/
+├── reports/
+├── src/
+│   ├── Amazon Sale Report.ipynb
+│   ├── Regression_Project_Amazon_Sales - 1.ipynb
+│   ├── Amazon-Sales_Report-Power-BI.pbix
+│   └── data/
+│       └── processed/
+│           └── Amazon_Sale_Report_Cleaned.csv
+└── temp/
 ```
 
 To reproduce the analysis:
