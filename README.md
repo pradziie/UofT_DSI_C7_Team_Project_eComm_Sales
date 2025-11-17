@@ -2,26 +2,65 @@
 ## ProfitLens: Visualizing E-Commerce Trends
 <img width="200" height="200" alt="profitLensLogo3" src="https://github.com/user-attachments/assets/fddb7c29-38b7-492e-8d77-59920b1b5698" />
 
-Business proposal - "Our goal is to understand which products, regions, and discount strategies drive the highest profitability and how data-driven decisions can improve business outcomes"
+# Project Overview
+ - [Purpose and Overview](#purpose-and-overview)
+ - [Methodology](#methodology)
+ - [Project Scope](#project-scope)
+ - [Responsibilities](#Responsibilities)
+ - [Repository Structure & Reproducibility](#Repository-Structure-&-Reproducibility)
+ - [Understanding the Data](#understanding-the-data)
+ - [Data Cleaning](#data-cleaning)
+ - [Data Analysis and Recommendations](#data-analysis-and-recommendations)
+ - [Conclusion](#conclusion)
+ - [Team Videos](#team-videos)
+ - [Bonus: UofT color themes for Power BI and Excel](#bonus-uoft-color-themes-for-power-bi-and-excel)
+ - [Credits and Source](#credits)
+   
+# Purpose and Overview 
 
-E-Commerce dataset from Kaggle to study how different factors — like products, regions, and discounts — affect sales and profit. We want to find out which areas of the business make the most money and how companies can use data to make smarter decisions.
+Our goal is to understand which products, regions, and discount strategies drive the highest profitability and how data-driven decisions can improve business outcomes. Many e-commerce sellers have rich order data but limited visibility into which product categories, regions, and discount strategies drive the most revenue and potential profit. ProfitLens focuses on turning historical Amazon order data into clear, action-oriented insights that can guide pricing, inventory, and fulfillment decisions.
 
-## Objectives 
-Clean and organize the data for analysis. Find patterns between Sales, Profit, and Discounts. Identify which categories and regions are most profitable. Create easy-to-understand charts and graphs to share results. Build a model to predict future profit or sales.
+E-Commerce dataset from Kaggle to study how different factors — like products, regions, and MRP — affect sales and profit. We want to find out which areas of the business make the most money and how companies can use data to make smarter decisions.
 
 ---
+# Methodology
+## Steps taken:
+-Data Cleaning: Addressed missing values, corrected inconsistencies, and prepared the dataset for analysis.\
+-Exploratory Analysis: Examined data patterns, distributions, and correlations to uncover key relationships.\
+-Regression Modeling and Validation: Applied Linear Regression and Random Forest Regressor to analyze factors influencing product popularity and sales performance. Built training and test sets, evaluated model accuracy using metrics such as RMSE and R², and used the insights to understand which products should be prioritized for stocking.\
+-Visualization: Developed clear visualizations to communicate insights and model outcomes.\
+-Conclusion: Summarized findings, model results, and actionable insights derived from the analysis.
 
-## Project Overview (Proposal)
+ ## Technical Stack:
+ - Python
+ - Power BI
 
-**Business motivation:** Many e-commerce sellers have rich order data but limited visibility into which product categories, regions, and discount strategies drive the most revenue and potential profit. ProfitLens focuses on turning historical Amazon order data into clear, action-oriented insights that can guide pricing, inventory, and fulfillment decisions.
+ ### Project Management tool used
+[GitHub Project](https://github.com/projects)
+
+ ### Libraries Used:
+ - Numpy: matrix operations
+ - Pandas: data analysis
+ - Matplotlib: creating graphs and plots
+ - Plotly: creating graphs and plots
+ - Seaborn: enhancing matplotlib plots
+ - SKLearn: RandomForestRegressor and LinearRegression
+   
+## Project Scope
 
 **Dataset selection:** We use the public **“Amazon Sale Report”** dataset from Kaggle. It contains order-level information including product category, quantity, amount, order status, fulfillment type, dates, and shipping details (city, state, postal code). This dataset is stored under `data/raw/Amazon Sale Report.csv`, with a cleaned version exported to `data/processed/Amazon_Sale_Report_Cleaned.csv` from the main analysis notebook in `src/Amazon Sale Report.ipynb`.
 
+## Stakeholders
+- Business Leadership / Executives - Make strategic decisions based on visualizations.
+- Sales & Marketing Teams - Use the insights to decide which promotions to run, and align inventory with demand.
+- Operations / Inventory / Supply Chain - Use demand forecasts to optimize stock levels, avoid overstocking low-margin SKUs, and reduce holding costs.
+
+  
 **Main questions / research focus:**
 - Which product categories contribute the most to overall sales (and proxy profit)?
 - Which cities/states and fulfillment channels (Amazon vs Merchant) drive the highest sales volumes?
 - How do order status and discount-related variables relate to sales performance?
-- What are the key time-based trends in sales, and can simple regression-type relationships help explain variation in revenue?
+- What are the key time-based trends in sales, and can simple regression-type relationships help explain popularity of the product?
 
 **Proposed methods / approach:**
 - Systematic **data cleaning and feature engineering** in `src/Amazon Sale Report.ipynb` (handling missing values, standardizing text, deriving year/month features, and exporting a cleaned dataset).
@@ -34,7 +73,7 @@ Clean and organize the data for analysis. Find patterns between Sales, Profit, a
 - Iryna: dataset selection, data exploration, KPI development, setting business goals, linear and random forest regression experiments
 - Paul: repo management, project tracking, data exploration and cleaning, slides, vizualization, presentation management
 
-### Repository Structure & Reproducibility
+# Repository Structure & Reproducibility
 
 The repository follows the recommended teaching structure from the Team Project guidelines, with a few project-specific additions (some duplication was needed for backups and reproducibility):
 
@@ -88,110 +127,15 @@ To reproduce the analysis:
 3. Run the notebook `src/Amazon Sale Report.ipynb` from the project root. The notebook loads the raw file using **relative paths** via `pathlib`, performs cleaning, and exports `data/processed/Amazon_Sale_Report_Cleaned.csv`.
 4. Optional: Open `experiments/Regression_Project_Amazon_Sales - 1.ipynb` to explore additional regression-focused experiments.
 
-### Project plan:
-Deliverable – End of Week 1 (Project Proposal)
-
-• Business motivation: Explain the problem or opportunity your project addresses and why it matters from a business perspective.
-
-• Dataset selection: Identify which dataset you chose, its source, and the key variables you’ll analyze.
-
-• Project objective / research question: State the main question or hypothesis your analysis or model will answer.
-
-• Proposed methods / approach: Briefly outline how you plan to explore the data (e.g., visualization, regression, classification, etc.).
-
-• Roles and responsibilities: Indicate who is doing what within the team.
-
-• Risks and unknowns: Note any challenges, assumptions, or potential limitations you’ve identified.
-
-• Initial repository structure: Your GitHub repo should follow the suggested folder layout (data/, src/, reports/, etc.) and include a clean .gitignore.
-
-### Project Management tool used
-[GitHub Project](https://github.com/projects)
-
-### Risks/Unknowns
-* No clear way to calculate profit margins given the datasets
-* Lack of cost/BOM data for further analysis
-* Time constraints
-
-### Parameters (main ones)
+ # Understanding the Data
+ ### Parameters (main ones)
 - price
 - product quantity
 - state
 - product type
 - date
-
-### Data cleaning temp notes (may be deleted with day one project delivery update):
-1. Remove unnecessary columns
-The column “index” is just numbering — you can delete it.
-“promotion-ids” may contain long text; you can either keep it for later or remove it if not needed for profit analysis.
-2. Fix missing values
-Some columns have missing entries:
-Courier Status, currency, Amount, ship-city, ship-state, fulfilled-by
-You can:
-Fill missing text fields with "Unknown"
-Drop rows with missing Amount (since sales amount is essential)
-3. Convert data types
-Date should be changed from text to date format (for time-based analysis).
-ship-postal-code should be made an integer (it’s currently stored as float).
-Columns like Amount should be numeric (already fine)
-4. Handle inconsistent text formats
-Convert all text columns like Category, ship-state, Status to lowercase to avoid duplicates like “Shipped” vs “shipped”.
-Remove extra spaces.
-5. Check for duplicate records
-Sometimes the same Order ID might appear twice (especially with status changes).
- Keep only the most recent or relevant status.
-6. Clean or group categorical values
-Combine similar order statuses like "Shipped - Delivered to Buyer" and "Shipped" into one.
-Group fulfillment types (e.g., Amazon, Merchant) for consistency.
-7. Currency consistency
-If the dataset contains multiple currencies, convert them all to one (e.g., INR).
-If it’s all INR, confirm and keep the column clean.
-8. Optional: Add derived columns
-Once clean, you can add:
-Profit Margin = Amount / Qty
-Month / Year extracted from Date for trend analysis.
-After data cleaning, your dataset will be ready to:
-Analyze sales by category, city, or fulfillment type
-Compare status vs. profit trends
-Find seasonal sales patterns
-Build visualizations for profitability insights
-THIS WE CAN INCLUDE FOR - Data Cleaning Tasks IN README FILE
-
-### Preliminary data analysis ideas:
-
-What to Explore Exploratory Data Analysis (EDA Ideas)
-Once cleaned, you can analyze patterns like:
-
-**Product Insights**
-Which categories (e.g., kurta, top, dress) sell the most?
-Which category brings the highest revenue?
-
-**Regional Insights**
-Which states or cities have the most orders?
-Are certain regions more profitable?
-
-**Order Performance**
-Compare Amazon-fulfilled vs Merchant-fulfilled orders.
-Find how many were cancelled, shipped, or pending.
-
-**Sales & Discount Patterns**
-How does quantity relate to total amount?
-Check if discounts or promotions affect sales volume.
-
-**Time-based Trends**
-Which months or days have the most orders or sales?
-Detect seasonal spikes in sales (for example, festivals or holidays).
-Once the data is clean, you can create charts like:
-Bar Chart: Sales by category
-Pie Chart: Order status breakdown
-Line Chart: Monthly sales trends
-Heatmap: Correlation between sales amount, quantity, and discounts
-
----
-
-## Methods & Key Findings (Current Status)
-
-### Data Cleaning & Feature Engineering
+- amount
+# Data Cleaning
 - Removed technical or redundant columns such as `index` and `Unnamed: 22`.
 - Standardized column names and cleaned text fields (`Category`, `ship-state`, `Status`, etc.) by trimming whitespace and converting to lowercase to avoid duplicates.
 - Converted `Date` to a proper datetime type and derived additional features such as `Year`, `Month`, and `Year-Month` for trend analysis.
@@ -200,7 +144,95 @@ Heatmap: Correlation between sales amount, quantity, and discounts
 
 These transformations are implemented in the `src/Amazon Sale Report.ipynb` notebook and exported as `Amazon_Sale_Report_Cleaned.csv` under `data/processed/`.
 
-### Exploratory Visualizations
+# Data Analysis And Recommendations
+
+Based on this pie chart, the recommendation is to introduce targeted promotions designed to increase repeat purchases.
+
+
+<img width="572" height="599" alt="image" src="https://github.com/user-attachments/assets/77395e60-4d70-4730-a556-07196e5ddb40" />
+
+### Repeat Purchases can be increased through:
+1. Personalized Promotions - Customers respond better when offers feel relevant.
+Examples:
+- Discounts based on previous purchases
+- “We miss you” promo after 30 days of no activity
+- Bundle discounts on frequently bought-together items
+- Personalized emails with product recommendations
+2. Loyalty or Rewards Program - Make customers feel rewarded for coming back.
+- Points for every purchase
+- Tier levels (Silver, Gold, Platinum)
+- Birthday or anniversary rewards
+3. Post-Purchase Follow-Up - Customers often buy again if they feel supported.
+- Send order follow-up email with product care tips
+- Ask for a review (and give a small incentive)
+- Suggest complementary products
+  
+4.Create Urgency or Exclusivity - People buy again when they feel they might miss out.
+- Limited-time deals
+- Members-only sales
+- New product drops with early access
+- 
+#  Applied Linear Regression and Random Forest Regressor to analyze factors influencing product popularity
+In the regression-focused notebook (`experiments/Regression_Project_Amazon_Sales - 1.ipynb`), we begin exploring simple regression-style relationships between these numeric variables to better understand drivers of sales.
+### SKU-Level Linear Regression: What Sells Most
+This version aggregates all orders by SKU to get each product’s total quantity sold and average amount.
+Then it fits a linear regression model to see which attributes drive higher total sales.
+Overall model
+RMSE: 19.35 - SKU-level sales vary a lot; some SKUs sell hundreds while most sell few - normal.
+R²: 0.0455 - Product attributes explain only 4.5% of variation in sales. But the coefficients still show clear patterns of what sells more.
+Because it explains only for 4.5% of variation in sales, Sku-Level REgression was tested (Random Forest REgressor). 
+
+### Random Forest Regressor gave the following results:
+
+RMSE: 2.55 -  on average, the model's predicted SKU counts are off by about 2.5 units, meaning predictions are reliable.
+R²: 0.9835 - the model explains 98.35% of the variance in SKU demand/popularity.
+The SKU’s performance is driven heavily by overall spending behavior, not by product attributes like size, category, or fulfillment type.
+
+### Recomendation based on RFR model:
+1. Pricing & Inventory.
+Focus on TotalAmount/price points: Since sales are highly driven by the total value of SKUs, consider adjusting inventory and promotions around high-value items.
+- Stock high-selling SKUs heavily:
+- Western Dresses (L/M/S)
+- Sets (S/M/XL)
+- Kurta (L/S)
+Ensuring these SKUs are always in stock can maximize revenue.
+
+2. Product & Category Strategy.
+- Promote top categories: Western Dresses and Sets are consistently top-sellers.
+- Consider expanding variants in the top-selling sizes (L and M) to capture more demand.
+- Lower emphasis on less influential categories until there is data showing potential growth.
+
+# Model Performance Summary:
+Both models identify the same top-selling SKUs and use the same features, but the quality of insights is very different. Random Forest produces accurate predictions and meaningful feature importance, while Linear Regression provides weak predictions and unstable, contradictory coefficients.
+
+### Results of RFR are also supported by 
+Sales by Category bar chart:
+
+<img width="714" height="528" alt="image" src="https://github.com/user-attachments/assets/c7002c46-9e9f-4a2b-b0b8-b70a6dc3325b" />
+### More Recommendations
+
+Top 10 Cities by Sales suggests which cities are important for stocking:
+
+<img width="895" height="479" alt="image" src="https://github.com/user-attachments/assets/6f43e01e-04b3-4861-844f-4fa645a6dbbf" />
+
+Recommendations based on Orders by Fulfilment chart.\
+<img width="406" height="269" alt="image" src="https://github.com/user-attachments/assets/7f7fb80c-c68f-4019-8f46-a9850971229c" />
+
+1. Increase Amazon-Fulfilled (FBA) Inventory
+Since 70% of our demand naturally prefers FBA, we should ensure:
+- FBA inventory is never out of stock
+- High-velocity SKUs (your top sellers) always have FBA coverage
+- Reduce long-term storage fees by trimming slow-moving FBA items, but keep fast movers stocked
+
+2. Improve FBM Performance for Cost Efficiency
+Since we still have 31% FBM, optimize it rather than eliminating it.
+- Ensure fast dispatch times
+- Maintain accurate stock to avoid cancellations
+- Improve packaging/handling time
+- Use regional carriers with cheaper rates
+ 
+
+### Extra Visualizations
 Using the main and experiments notebooks, we built several visualizations to answer our core questions:
 
 - **Sales by Category:** Horizontal bar charts highlight the top 10 categories by sales, with the highest-performing category accentuated (e.g., gold highlight). This makes it easy to see which product lines drive the most revenue.
@@ -210,7 +242,7 @@ Using the main and experiments notebooks, we built several visualizations to ans
 - **Time Series of Monthly Sales:** Line and area plots of monthly sales (with a 3‑month moving average) highlight seasonality, growth/decline periods, and peak months.
 - **Correlation Heatmaps:** Numeric correlations between `Amount`, `Qty`, and `Discount` are visualized via heatmaps, providing a quick view of how quantity and discount levels relate to sales.
 
-#### Power BI dashboard - early version
+#### Power BI dashboard.
 <img width="2817" height="1566" alt="PBI" src="https://github.com/user-attachments/assets/5dc10947-19b8-4274-96d6-d5303dd77402" />
 
 #### Other visualization examples
@@ -219,7 +251,7 @@ Using the main and experiments notebooks, we built several visualizations to ans
 ### Regression analysis
 In the regression-focused notebook (`experiments/Regression_Project_Amazon_Sales - 1.ipynb`), we begin exploring simple regression-style relationships between these numeric variables to better understand drivers of sales.
 
-### Early Business Insights
+# Conclusion
 
 Based on the current state of analysis (subject to refinement as the project continues):
 - A small number of **top product categories** account for a large share of total sales, suggesting an opportunity to double down on high-performing lines while reviewing the long tail of low-selling categories.
@@ -227,15 +259,16 @@ Based on the current state of analysis (subject to refinement as the project con
 - The **order status breakdown** reveals the proportion of cancelled or pending orders, which may hint at operational bottlenecks (e.g., logistics or inventory issues) that reduce realized revenue.
 - Correlation analysis shows how **quantity and discounts** are related to `Amount`, offering an early view on how discounting might boost volume and revenue (to be validated with deeper regression modelling).
 - Time-series plots show **peak months** where sales spike, which can inform seasonal planning and promotional calendars.
-
-These insights will be refined as we iterate on the regression experiments and potentially incorporate more advanced modelling.
+Our recommendation for the business stakeholders is to make use of the Random Forest Regression model as a decision-support tool but not yet a fully autonomous system. Continuous improvement is needed in expanding dataset and cross-department data collaboration to enrich model inputs and model maturity.
 
 ### Presentation link
 [placeholder]
 
 Individual team member video links:
 [Iryna](https://drive.google.com/file/d/1LB2xYGn2IAvMGN7PT1Lnmuflfl_v5SPW/view?usp=sharing)
+
 [Vikrama]()
+
 [Paul]()
 
 ## Bonus: UofT color themes for Power BI and Excel
@@ -246,7 +279,11 @@ Individual team member video links:
 [UofT Power BI color theme](https://github.com/pradziie/UofT_DSI_C7_Team_Project_eComm_Sales/blob/main/data/design/color%20themes/UofT%20Power%20BI%20Color%20Theme.json)
 (save and import it in Power BI Desktop via View → Themes → Browse for themes)
 
----
+
+## Credits and Source
+  
+The data was sourced from Kaggle.\
+[E-commerce-sales](https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data)
 
 ## Future versions:
 
