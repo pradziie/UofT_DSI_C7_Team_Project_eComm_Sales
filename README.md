@@ -272,7 +272,7 @@ Individual team member video links:
 
 [Vikrama]( https://youtu.be/Xg_bB7GBvIo )
 
-[Paul]()
+[Paul](https://youtu.be/wv9CWg1ii7A)
 
 ## Bonus: UofT color themes for Power BI and Excel
 
