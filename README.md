@@ -263,7 +263,7 @@ Based on the current state of analysis (subject to refinement as the project con
 - Time-series plots show **peak months** where sales spike, which can inform seasonal planning and promotional calendars.
 Our recommendation for the business stakeholders is to make use of the Random Forest Regression model as a decision-support tool but not yet a fully autonomous system. Continuous improvement is needed in expanding dataset and cross-department data collaboration to enrich model inputs and model maturity.
 
-### Presentation link
+## Presentation links
 [placeholder]
 
 Individual team member video links:
