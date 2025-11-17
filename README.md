@@ -14,7 +14,7 @@
  - [Conclusion](#conclusion)
  - [Team Videos](#team-videos)
  - [Bonus: UofT color themes for Power BI and Excel](#bonus-uoft-color-themes-for-power-bi-and-excel)
- - [Credits and Source](#credits)
+ - [Credits and Source](#credits-and-source)
    
 # Purpose and Overview 
 
