@@ -158,20 +158,22 @@ Examples:
 - “We miss you” promo after 30 days of no activity
 - Bundle discounts on frequently bought-together items
 - Personalized emails with product recommendations
+  
 2. Loyalty or Rewards Program - Make customers feel rewarded for coming back.
 - Points for every purchase
 - Tier levels (Silver, Gold, Platinum)
 - Birthday or anniversary rewards
+  
 3. Post-Purchase Follow-Up - Customers often buy again if they feel supported.
 - Send order follow-up email with product care tips
 - Ask for a review (and give a small incentive)
 - Suggest complementary products
   
-4.Create Urgency or Exclusivity - People buy again when they feel they might miss out.
+4. Create Urgency or Exclusivity - People buy again when they feel they might miss out.
 - Limited-time deals
 - Members-only sales
 - New product drops with early access
-- 
+  
 #  Applied Linear Regression and Random Forest Regressor to analyze factors influencing product popularity
 In the regression-focused notebook (`experiments/Regression_Project_Amazon_Sales - 1.ipynb`), we begin exploring simple regression-style relationships between these numeric variables to better understand drivers of sales.
 ### SKU-Level Linear Regression: What Sells Most
