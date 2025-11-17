@@ -270,7 +270,7 @@ Individual team member video links:
 
 [Iryna](https://drive.google.com/file/d/1LB2xYGn2IAvMGN7PT1Lnmuflfl_v5SPW/view?usp=sharing)
 
-[Vikrama]()
+[Vikrama]( https://youtu.be/Xg_bB7GBvIo )
 
 [Paul]()
 
