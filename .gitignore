@@ -1,0 +1,23 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+.env
+.python-version
+
+# Data & temp files
+data/raw/
+data/processed/
+data/temp/
+models/
+temp/
+*.pbix
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
