@@ -264,8 +264,6 @@ Based on the current state of analysis (subject to refinement as the project con
 Our recommendation for the business stakeholders is to make use of the Random Forest Regression model as a decision-support tool but not yet a fully autonomous system. Continuous improvement is needed in expanding dataset and cross-department data collaboration to enrich model inputs and model maturity.
 
 ## Team Videos
-[placeholder for team presentation]
-
 Individual team member video links:
 
 [Iryna](https://drive.google.com/file/d/1LB2xYGn2IAvMGN7PT1Lnmuflfl_v5SPW/view?usp=sharing)
