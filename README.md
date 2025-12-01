@@ -123,7 +123,7 @@ The repository follows the recommended teaching structure from the Team Project 
 
 To reproduce the analysis:
 1. Create and activate a Python environment with `pandas`, `numpy`, `matplotlib`, `seaborn`, and `plotly` installed.
-2. Place the raw Kaggle file as `data/raw/Amazon Sale Report.csv` (or use the provided copy in this repo).
+2. Place the raw Kaggle file as `data/raw/Amazon Sale Report.csv` (or just run the Amazon Sale Report.ipynb under src folder: it will download the raw file from Kaggle unde data/raw).
 3. Run the notebook `src/Amazon Sale Report.ipynb` from the project root. The notebook loads the raw file using **relative paths** via `pathlib`, performs cleaning, and exports `data/processed/Amazon_Sale_Report_Cleaned.csv`.
 4. Optional: Open `experiments/Regression_Project_Amazon_Sales - 1.ipynb` to explore additional regression-focused experiments.
 
@@ -285,6 +285,10 @@ Individual team member video links:
   
 The data was sourced from Kaggle.\
 [E-commerce-sales](https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data)
+
+Requirements.txt file included information sourced from the University of Toronto Data Sciences Institute guides and repositories:
+[UV environment instructions](https://github.com/UofT-DSI/onboarding/blob/main/environment_setup/os_guides/tech_onboarding_windows.md#UV)
+
 
 ## Future versions:
 
