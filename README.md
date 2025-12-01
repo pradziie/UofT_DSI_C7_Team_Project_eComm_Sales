@@ -287,7 +287,10 @@ The data was sourced from Kaggle.\
 [E-commerce-sales](https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data)
 
 Requirements.txt file included information sourced from the University of Toronto Data Sciences Institute guides and repositories:
-[UV environment instructions](https://github.com/UofT-DSI/onboarding/blob/main/environment_setup/os_guides/tech_onboarding_windows.md#UV)
+
+[UofT DSI UV environment instructions](https://github.com/UofT-DSI/onboarding/blob/main/environment_setup/os_guides/tech_onboarding_windows.md#UV)
+
+[UofT DSI Python installation instructions](https://github.com/UofT-DSI/python/blob/main/SETUP.md)
 
 
 ## Future versions:
